@@ -11,8 +11,6 @@ end
 
 gem "bullet_train-billing", github: "tujucreative/bullet_train-billing", branch: "main"
 
-gem "sqlite3"
-
 gem "sprockets-rails"
 
 # Not a direct dependency of this repo; the starter provides it.
