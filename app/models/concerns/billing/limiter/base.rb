@@ -40,7 +40,7 @@ module Billing::Limiter::Base
       usage_for(action, model, limit["duration"], limit["interval"]) || 0
     end
 
-    current_count + count > limit["count"] ? current_count : nil
+    (current_count + count > limit["count"]) ? current_count : nil
   end
 
   def hard_limits_for(action, model)
@@ -50,7 +50,7 @@ module Billing::Limiter::Base
   def limits_for(action, model, enforcement: nil)
     # Collect any relevant limits from all active products.
     all_limits = current_products.map do |product|
-      limits = product.respond_to?(:limits) && product.limits.present? ? (product.limits[limit_key(model)] || {}) : {}
+      limits = (product.respond_to?(:limits) && product.limits.present?) ? (product.limits[limit_key(model)] || {}) : {}
       limits.each do |action, limit|
         limit["product_id"] = product.id
       end

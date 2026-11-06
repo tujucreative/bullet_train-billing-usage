@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version = BulletTrain::Billing::Usage::VERSION
   spec.authors = ["Andrew Culver"]
   spec.email = ["andrew.culver@gmail.com"]
-  spec.homepage = "https://github.com/bullet-train-co/bullet_train-billing-usage"
+  spec.homepage = "https://github.com/tujucreative/bullet_train-billing-usage"
   spec.summary = "Bullet Train Billing Usage"
   spec.description = spec.summary
   spec.license = "Nonstandard"
@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "bullet_train-billing"
   spec.add_dependency "verbs"
 
-  spec.add_development_dependency "pg", "~> 1.4.5"
-  spec.add_development_dependency "factory_bot_rails", "~> 6.2.0"
+  spec.add_development_dependency "pg", "~> 1.5"
+  spec.add_development_dependency "factory_bot_rails", "~> 6.2"
   spec.add_development_dependency "standard"
 end
